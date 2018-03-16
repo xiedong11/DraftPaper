@@ -10,6 +10,11 @@ import android.widget.RelativeLayout;
 
 import com.example.ccpaintview.view.CcPaintView;
 
+/**
+ * desc :草稿纸公用Activity
+ * author：xiedong
+ * data：2018/3/5
+ */
 public class DraftPaperActivity extends Activity implements View.OnClickListener {
 
     private CcPaintView paintView;

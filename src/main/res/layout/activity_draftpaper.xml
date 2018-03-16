@@ -1,101 +1,114 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/rootView"
-    android:layout_width="fill_parent"
-    android:layout_height="fill_parent"
-    android:background="@android:color/black">
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
 
     <RelativeLayout
-        android:id="@+id/layoutTop"
-        android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentTop="true"
-        android:background="#FFF">
-
-        <ImageButton
-            android:id="@+id/btnClose"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_alignParentRight="true"
-            android:layout_centerVertical="true"
-            android:layout_marginRight="20dp"
-            android:background="@drawable/ic_close_draftpaper"
-            android:text="关闭" />
-
-        <ImageButton
-
-            android:id="@+id/btnClear"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_alignParentLeft="true"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="20dp"
-            android:background="@drawable/ic_clear_draftpaper"
-            android:text="清空" />
-
-        <ImageButton
-            android:id="@+id/btnPrivious"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="100dp"
-            android:layout_toRightOf="@id/btnClear"
-            android:background="@drawable/ic_privious_draftpaper"
-            android:text="上一步" />
-
-        <ImageButton
-            android:id="@+id/btnNext"
-            android:layout_width="25dp"
-            android:layout_height="25dp"
-            android:layout_centerVertical="true"
-            android:layout_marginLeft="50dp"
-            android:layout_toRightOf="@id/btnPrivious"
-            android:background="@drawable/ic_next_draftpaper"
-            android:text="下一步" />
-
-    </RelativeLayout>
-
-    <RelativeLayout
+        android:id="@+id/rootView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/layoutTop">
+        android:background="@android:color/black">
 
-        <com.example.ccpaintview.view.CcPaintView
-            android:id="@+id/paintView"
+        <LinearLayout
+            android:id="@+id/layoutTop"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_height="160px"
+            android:background="#FFF"
+            android:gravity="center">
+
+            <ImageButton
+                android:id="@+id/btnClose"
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="20px"
+                android:background="@drawable/ic_close_draftpaper" />
+
+            <ImageButton
+                android:id="@+id/btnClear"
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="150px"
+                android:background="@drawable/ic_clear_draftpaper" />
+
+            <ImageButton
+                android:id="@+id/btnPrivious"
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="150px"
+                android:layout_toRightOf="@id/btnClear"
+                android:background="@drawable/ic_privious_draftpaper" />
+
+            <ImageButton
+                android:id="@+id/btnNext"
+                android:layout_width="50px"
+                android:layout_height="50px"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="150px"
+                android:layout_toRightOf="@id/btnPrivious"
+                android:background="@drawable/ic_next_draftpaper" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/layoutTop">
+
+            <com.example.ccpaintview.view.CcPaintView
+                android:id="@+id/paintView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </RelativeLayout>
+
+        <RadioGroup
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="55px"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <RadioButton
+                android:id="@+id/rb_white_paint"
+                android:layout_width="40px"
+                android:layout_height="40px"
+                android:layout_marginRight="30px"
+                android:background="@drawable/selector_white_paint"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/rb_black_paint"
+                android:layout_width="40px"
+                android:layout_height="40px"
+                android:layout_marginRight="30px"
+                android:background="@drawable/selector_black_paint"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/rb_red_paint"
+                android:layout_width="40px"
+                android:layout_height="40px"
+                android:layout_marginRight="30px"
+                android:background="@drawable/selector_red_paint"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/rb_blue_paint"
+                android:layout_width="40px"
+                android:layout_height="40px"
+                android:layout_marginRight="30px"
+                android:background="@drawable/selector_blue_paint"
+                android:button="@null" />
+
+            <RadioButton
+                android:id="@+id/rb_yellow_paint"
+                android:layout_width="40px"
+                android:layout_height="40px"
+                android:layout_marginRight="30px"
+                android:background="@drawable/selector_yellow_paint"
+                android:button="@null" />
+        </RadioGroup>
     </RelativeLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="50px"
-        android:layout_alignParentBottom="true"
-        android:layout_marginBottom="30dp"
-        android:gravity="center">
-
-        <View
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginRight="20dp"
-            android:background="@mipmap/ic_launcher" />
-
-        <View
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginRight="20dp"
-            android:background="@mipmap/ic_launcher" />
-
-        <View
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginRight="20dp"
-            android:background="@mipmap/ic_launcher" />
-
-        <View
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:layout_marginRight="20dp"
-            android:background="@mipmap/ic_launcher" />
-    </LinearLayout>
-</RelativeLayout>
+</LinearLayout>

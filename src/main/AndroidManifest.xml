@@ -16,7 +16,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name=".DraftPaperActivity"/>
+        <activity
+            android:name=".DraftPaperActivity"
+            android:theme="@style/DraftStyle" />
     </application>
 
 </manifest>
